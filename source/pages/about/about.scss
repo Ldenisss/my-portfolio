@@ -1,0 +1,200 @@
+@function rem($px){
+    @return $px / 16px+0rem;
+}
+
+.main {
+    display: flex;
+    max-height: rem(700px);
+    background-image: url('./images/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    &__arrow-down {
+        margin-top: rem(133px);
+    }
+    
+}
+.greetings {
+    &__logo {
+        width: rem(141px);
+        height: rem(141px);
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: rem(40px);
+        margin-bottom: rem(20px);
+    }
+    &__name {
+        font-family: 'Roboto';
+        font-size: rem(35px);
+        font-weight: 500;
+        color: #fff;
+    }
+    &__title {
+        font-family: 'Roboto';
+        font-size: rem(16px);
+        font-weight: normal;
+        color: #fff;
+        line-height: 1.5;
+    }
+}
+.box {
+    margin-top: rem(-200px);
+}
+.traingle .left{
+    fill: #ebefe2;
+}
+.traingle .right{
+    fill: #f4f5f0;
+}
+svg {
+    display: block;
+}
+.about {
+    max-height: rem(1000px);
+    
+    
+    &__content {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+    &__left {
+        display: flex;
+        width: 50%;
+        background-color: #ebefe2;
+        
+    }
+    &__me {
+        display: flex;
+        width: 50%;
+        justify-content: center;
+    }
+    &__WhoAmI  {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__left-title {
+        text-align: center;
+        font-family: 'Roboto';
+        font-size: 63.2px;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-style: normal;
+        color: #373e42;
+        line-height: 1.05;
+        letter-spacing: 1.6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:after {
+            content: '';
+            display: flex;
+            width: rem(90px);
+            height: rem(3px);
+            background-color: #373e42;
+            margin-top: rem(30px);
+            margin-bottom: rem(30px);
+            
+        }
+        &--small {
+            font-size: rem(35px);
+            color: #566358;
+            width: rem(350px);
+            
+        }
+    }
+    &__left-logo {
+        display: flex;
+        
+        height: rem(390px);
+        margin-bottom: rem(40px);
+    }
+    &__left-logo-img {
+        background-image: url('./images/about-my-photo.png');
+        background-size: cover;
+    }
+    &__left-desc {
+        font-family: 'Roboto';
+        font-size: rem(16px); 
+        color: #566358;
+        width: 90%;
+    }
+
+
+    //правая часть 
+
+    &__right {
+        background-color: #f4f5f0;
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    // map
+
+    &__map {
+        max-height: rem(1000px);
+        background-image: url('./images/bg-map.png');
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+    }
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        width: rem(380px);
+        background-color: #f4f5f0;
+        opacity: 0.85;
+        align-items: center;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+    }
+    &__contact-title {
+        margin-top: rem(36px);
+    }
+
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-height: rem(190px);
+    margin-top: rem(-210px);
+    &__row-up {
+        background-color: #373e42;
+        opacity: .85;
+    }
+    &__row-up-list  {
+        display: flex;
+        padding: rem(5px);
+        width: 100%;
+    }
+    &__row-up-item {
+        width: 33.33%;
+        list-style-type: none;
+        color: #fff;
+    }
+    &__row-down {
+        width: 100%;
+        background-color: #6c9c5a;
+        opacity: 0.85;
+        text-align: center;
+    }
+}

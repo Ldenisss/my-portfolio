@@ -1,0 +1,66 @@
+extends ../base
+block head
+    title about
+block content 
+    section.section.main
+        .main__header 
+            .greetings__logo
+                img.greetings__logo--img(src="../source/pages/index/images/my-photo.png", alt="my-photo")
+            .greetings__name Лепин Денис
+            .greetings__title Личный сайт веб разработчика
+        .main__arrow-down
+            a(href="http://").main__arrow-down-link
+                img(src="../source/pages/about/images/arrow-down.png", alt="arrow-down").main__arrow-down-img
+    main.about
+        <div class="box">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle">
+                <polygon class = "left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+                 <polygon class = "right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+            </svg>
+        </div>
+        .about__content 
+            .about__left
+                .about__me
+                    .about__left-title обо мне
+                .about__WhoAmI  
+                    .about__left-logo
+                        img(src="../source/pages/about/images/about-my-photo.png", alt="").about__left-logo-img
+                    .about__left-title.about__left-title--small кто я
+                    .about__left-desc 
+                        p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                        p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+            .about__right
+                .about__left-title.about__left-title--small чем я могу быть вам полезен
+                .about__left-desc  
+                    p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку. 
+                ul.about__right-list
+                    li.about__right-item Frontend
+                    li.about__right-item Backend
+                    li.about__right-item WorkFlow
+        .about__map 
+            .about__contact
+                .about__left-title.about__left-title--small.about__contact-title контакты
+                ul.about__contact-list
+                    li.about__contact-item
+                        .about__contact-item-logo
+                        .about__contact-item-desc.about__left-desc  skype_kdn
+                    li.about__contact-item
+                        .about__contact-item-logo
+                        .about__contact-item-desc.about__left-desc  astahov@gmail.com
+                    li.about__contact-item
+                        .about__contact-item-logo
+                        .about__contact-item-desc.about__left-desc +7 931 200 93 24
+                    li.about__contact-item
+                        .about__contact-item-logo
+                        .about__contact-item-desc.about__left-desc Новосибирск 
+        .footer
+            .footer__row-up
+                ul.footer__row-up-list 
+                    li.footer__row-up-item
+                        p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+                    li.footer__row-up-item
+                    li.footer__row-up-item
+                        p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+                        p — Martin Goldin
+            .footer__row-down
+                p © Лепин Денис | Создано с любовью в LoftSchool | 2016
