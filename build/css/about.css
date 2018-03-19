@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'Sansus Webissimo';
+  src: local("Sansus Webissimo"), local("SansusWebissimo"), url(../images/sansuswebissimo.woff2) format("woff2"), url(../images/sansuswebissimo.woff) format("woff"), url(../images/sansuswebissimo.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Sansus Webissimo';
+  src: local("Sansus Webissimo Italic"), local("SansusWebissimo-Italic"), url(../images/sansuswebissimoitalic.woff2) format("woff2"), url(../images/sansuswebissimoitalic.woff) format("woff"), url(../images/sansuswebissimoitalic.ttf) format("truetype");
+  font-weight: 400;
+  font-style: italic; }
+.main {
+  display: flex;
+  max-height: 43.75rem;
+  background-image: url(../images/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .main__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .main__arrow-down {
+    margin-top: 8.3125rem; }
+
+.greetings__logo {
+  width: 8.8125rem;
+  height: 8.8125rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem; }
+
+.greetings__name {
+  font-family: 'Roboto';
+  font-size: 2.1875rem;
+  font-weight: 500;
+  color: #fff; }
+
+.greetings__title {
+  font-family: 'Roboto';
+  font-size: 1rem;
+  font-weight: normal;
+  color: #fff;
+  line-height: 1.5; }
+
+.box {
+  margin-top: -12.5rem; }
+
+.traingle .left {
+  fill: #ebefe2; }
+
+.traingle .right {
+  fill: #f4f5f0; }
+
+svg {
+  display: block; }
+
+.about {
+  max-height: 62.5rem; }
+  .about__content {
+    display: flex;
+    width: 100%;
+    height: 100%; }
+  .about__left {
+    display: flex;
+    width: 50%;
+    background-color: #ebefe2; }
+  .about__me {
+    display: flex;
+    width: 50%;
+    justify-content: center; }
+  .about__WhoAmI {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .about__left-title {
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 63.2px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-style: normal;
+    color: #373e42;
+    line-height: 1.05;
+    letter-spacing: 1.6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .about__left-title:after {
+      content: '';
+      display: flex;
+      width: 5.625rem;
+      height: 0.1875rem;
+      background-color: #373e42;
+      margin-top: 1.875rem;
+      margin-bottom: 1.875rem; }
+    .about__left-title--small {
+      font-size: 2.1875rem;
+      color: #566358;
+      width: 21.875rem; }
+  .about__left-logo {
+    display: flex;
+    height: 24.375rem;
+    margin-bottom: 2.5rem; }
+  .about__left-logo-img {
+    background-image: url(../images/about-my-photo.png);
+    background-size: cover; }
+  .about__left-desc {
+    font-family: 'Roboto';
+    font-size: 1rem;
+    color: #566358;
+    width: 90%; }
+  .about__right {
+    background-color: #f4f5f0;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center; }
+  .about__map {
+    max-height: 62.5rem;
+    background-image: url(../images/bg-map.png);
+    background-size: cover;
+    height: 100vh;
+    position: relative; }
+  .about__contact {
+    display: flex;
+    flex-direction: column;
+    width: 23.75rem;
+    background-color: #f4f5f0;
+    opacity: 0.85;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .about__contact-title {
+    margin-top: 2.25rem; }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-height: 11.875rem;
+  margin-top: -13.125rem; }
+  .footer__row-up {
+    background-color: #373e42;
+    opacity: .85; }
+  .footer__row-up-list {
+    display: flex;
+    padding: 0.3125rem;
+    width: 100%; }
+  .footer__row-up-item {
+    width: 33.33%;
+    list-style-type: none;
+    color: #fff; }
+  .footer__row-down {
+    width: 100%;
+    background-color: #6c9c5a;
+    opacity: 0.85;
+    text-align: center; }
