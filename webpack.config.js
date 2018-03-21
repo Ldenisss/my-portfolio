@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
-
+// const SpriteLoaderPlugin = require('svg-sprite-loader');
 
 
 
@@ -52,7 +52,7 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: 'common'
         }),
-       
+        // new SpriteLoaderPlugin(),
         
     ],
     module: {
@@ -90,7 +90,15 @@ module.exports = {
                     }
                 ]
             },
-           
+            // {
+            //     test: /\.svg$/,
+            //     loader: 'svg-sprite-loader', 
+            //     include: path.resolve(__dirname, 'source/commons/sprite/to_sprite/'),
+            //     options: {
+            //       extract: true,
+            //       spriteFilename: 'source/commons/sprite/sprite.svg'
+            //     }
+            // }
 
         ]
     }

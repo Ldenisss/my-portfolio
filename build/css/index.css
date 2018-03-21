@@ -25,7 +25,13 @@
   border-bottom-left-radius: 1.25rem;
   border-bottom-right-radius: 1.25rem;
   margin-top: 1.25rem;
-  transition: .5s; }
+  transition: .5s;
+  width: 12.5rem;
+  height: 2.8125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; }
 
 .authorization__btn:hover {
   background: #4e8839;
@@ -34,8 +40,6 @@
 .btn__name {
   font-size: 1rem;
   color: #ffffff;
-  padding: 0.3125rem 0.625rem 0.3125rem 0.625rem;
-  padding-bottom: 0.5rem;
   font-family: 'Roboto'; }
 
 .greetings__main {

@@ -11,7 +11,18 @@
   .main__header {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    position: relative; }
+    .main__header::after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 73.5rem;
+      height: 19.5625rem;
+      background-image: url(../images/portfolio-header.png); }
   .main__arrow-down {
     margin-top: 8.3125rem; }
 
@@ -73,6 +84,32 @@ svg {
     font-size: 2.1875rem;
     color: #566358;
     width: 21.875rem; }
+  .about__left-title--work {
+    display: flex;
+    position: relative; }
+    .about__left-title--work::before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 31.25rem;
+      height: 10.9375rem;
+      background-image: url(../images/works-header.png); }
+  .about__left-title--about {
+    display: flex;
+    position: relative; }
+    .about__left-title--about::before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 31.25rem;
+      height: 10.9375rem;
+      background-image: url(../images/about-header.png); }
 
 .work__title {
   display: flex;
@@ -88,11 +125,11 @@ svg {
 .work__slider-left {
   display: flex;
   width: 50%;
-  height: 100vh;
+  height: 100%;
   background-color: #ebefe2;
   align-items: center;
   justify-content: center;
-  max-height: 46.875rem; }
+  height: 46.875rem; }
 
 .work__slider-left-content {
   display: flex;
@@ -129,21 +166,19 @@ svg {
   color: #ffffff; }
 
 .work__slider-right {
-  max-height: 46.875rem;
+  height: 46.875rem;
   width: 50%;
-  height: 100vh;
+  height: 100%;
   background-color: #e1e4d7; }
 
 .work__slider-right-prev {
-  max-height: 32.8125rem;
-  height: 100vh;
+  min-height: 32.8125rem;
   display: flex;
   justify-content: center;
   align-items: center; }
 
 .work__slider-right-buttom {
-  max-height: 14.0625rem;
-  height: 100vh;
+  min-height: 14.0625rem;
   background-color: #4e8839;
   display: flex;
   width: 100%; }
@@ -159,6 +194,14 @@ svg {
 
 .work__slider-right-buttom-right {
   background-color: rgba(147, 153, 141, 0.7); }
+
+.work__slider-right-prev-logo {
+  width: 40.1875rem;
+  height: 26rem;
+  overflow: hidden; }
+
+.work__slider-right-prev-img {
+  width: 100%; }
 
 .work__about-me {
   display: flex;
@@ -282,8 +325,7 @@ svg {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  max-height: 11.875rem;
-  margin-top: -13.125rem; }
+  margin-top: -10rem; }
   .footer__row-up {
     background-color: #373e42;
     opacity: .85; }
@@ -292,11 +334,36 @@ svg {
     padding: 0.3125rem;
     width: 100%; }
   .footer__row-up-item {
-    width: 33.33%;
+    width: 33%;
     list-style-type: none;
-    color: #fff; }
+    color: #fff;
+    display: flex;
+    justify-content: flex-start; }
+    .footer__row-up-item::after {
+      content: '';
+      display: flex;
+      width: 0.0625rem;
+      height: 5.4375rem;
+      background-color: #fff;
+      opacity: .2;
+      margin-left: 3.125rem; }
+    .footer__row-up-item:last-child:after {
+      display: none; }
+    .footer__row-up-item--last {
+      flex-direction: column; }
   .footer__row-down {
     width: 100%;
     background-color: #6c9c5a;
     opacity: 0.85;
     text-align: center; }
+  .footer__row-up-desc {
+    font-family: 'Roboto';
+    font-size: 1rem;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 0.3125rem; }
+    .footer__row-up-desc--last {
+      color: rgba(255, 255, 255, 0.5);
+      font-style: italic; }
+    .footer__row-up-desc--author {
+      font-weight: bold; }

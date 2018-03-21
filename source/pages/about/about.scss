@@ -2,6 +2,91 @@
     @return $px / 16px+0rem;
 }
 
+
+// скилы 
+.g-circles {
+    fill: none;
+    stroke-width: 25;
+    position: relative;
+}
+.html {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+} 
+.css {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+} 
+.js {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+} 
+.php {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+}
+.mySQL {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+}
+.nodeJS {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+}
+.mongo {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+}
+.git {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+}
+.webpack {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+}
+.bower {
+    stroke-dasharray:157 314 ;
+    transition: all 1s;
+}
+
+.svgtext {
+    
+}
+.about {
+    &__right-frontend-list {
+        display: flex;
+        margin: 0;
+        padding:  0;
+        
+    }
+    &__right-frontend-item  {
+        list-style-type: none;
+        margin-right: rem(40px);
+       
+    }
+    &__right-item  {
+        list-style-type: none;
+        margin-bottom: rem(40px);
+        font-family: 'Roboto';
+        font-size: rem(28px);
+        font-weight: 500;
+        color: #566358;
+    }
+    &__right-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+        width: 90%;
+    }
+    &__right-content {
+        width: 90%;
+        
+    }
+} 
+
 .main {
     display: flex;
     max-height: rem(700px);
@@ -16,6 +101,18 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: rem(1176px);
+            height: rem(313px);
+            background-image: url('./images/portfolio-header.png');
+        }
         
     }
     &__arrow-down {
@@ -113,16 +210,32 @@ svg {
             width: rem(350px);
             
         }
+        &--about {
+            display: flex;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 3%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: rem(500px);
+                height: rem(175px);
+                background-image: url('./images/about-header.png');
+            }
+        }
     }
     &__left-logo {
         display: flex;
-        
+        width: 80%;
         height: rem(390px);
         margin-bottom: rem(40px);
+        
     }
     &__left-logo-img {
         background-image: url('./images/about-my-photo.png');
-        background-size: cover;
+        width: 100%;
     }
     &__left-desc {
         font-family: 'Roboto';
@@ -138,9 +251,16 @@ svg {
         background-color: #f4f5f0;
         display: flex;
         width: 50%;
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
         
+        
+    }
+    &__right-title, &__right-desc {
+        display: flex;
+        justify-content: center;
+    }
+    &__right-desc {
+        margin-bottom: rem(56px);
     }
 
     // map
@@ -175,8 +295,7 @@ svg {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    max-height: rem(190px);
-    margin-top: rem(-210px);
+    margin-top: rem(-160px);
     &__row-up {
         background-color: #373e42;
         opacity: .85;
@@ -187,14 +306,47 @@ svg {
         width: 100%;
     }
     &__row-up-item {
-        width: 33.33%;
+        width: 33%;
         list-style-type: none;
         color: #fff;
+        display: flex; 
+        justify-content: flex-start;
+        &::after {
+            content: '';
+            display: flex;
+            width: rem(1px);
+            height: rem(87px);
+            background-color: #fff;
+            opacity: .2;
+            margin-left: rem(50px);
+            
+            
+        }
+        &:last-child:after {
+            display: none;
+        }
+        &--last {
+            flex-direction: column;
+        }
     }
     &__row-down {
         width: 100%;
         background-color: #6c9c5a;
         opacity: 0.85;
         text-align: center;
+    }
+    &__row-up-desc {
+        font-family: 'Roboto';
+        font-size: rem(16px);
+        font-weight: 300;
+        color: #ffffff;
+        padding: rem(5px);
+        &--last {
+            color: rgba(255, 255, 255, 0.5);
+            font-style: italic;
+        }
+        &--author {
+            font-weight: bold;
+        }
     }
 }

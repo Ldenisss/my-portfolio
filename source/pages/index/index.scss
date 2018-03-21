@@ -33,6 +33,12 @@
     border-bottom-right-radius: rem(20px);
     margin-top: rem(20px);
     transition: .5s;
+    width: rem(200px);
+    height: rem(45px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 .authorization__btn:hover {
     background: #4e8839;
@@ -41,8 +47,7 @@
 .btn__name {
     font-size: rem(16px);
     color: #ffffff;
-    padding: rem(5px) rem(10px) rem(5px) rem(10px);
-    padding-bottom: rem(8px);
+
     font-family: 'Roboto';
 
 }

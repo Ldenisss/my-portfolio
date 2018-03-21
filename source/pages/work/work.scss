@@ -12,10 +12,24 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
     &__header {
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: rem(1176px);
+            height: rem(313px);
+            background-image: url('./images/portfolio-header.png');
+        }
+        
         
     }
     &__arrow-down {
@@ -83,11 +97,42 @@ svg {
             margin-bottom: rem(30px);
             
         }
+
         &--small {
             font-size: rem(35px);
             color: #566358;
             width: rem(350px);
             
+        }
+        &--work {
+            display: flex;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: rem(500px);
+                height: rem(175px);
+                background-image: url('./images/works-header.png');
+            }
+        }
+        &--about {
+            display: flex;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: rem(500px);
+                height: rem(175px);
+                background-image: url('./images/about-header.png');
+            }
         }
     }
 }
@@ -108,11 +153,11 @@ svg {
     &__slider-left {
         display: flex;
         width: 50%;
-        height: 100vh;
+        height: 100%;
         background-color: #ebefe2;
         align-items: center;
         justify-content: center;
-        max-height: rem(750px);
+        height: rem(750px);
     }
     &__slider-left-content {
         display: flex;
@@ -151,21 +196,20 @@ svg {
     }
     // правая часть  слайдера
     &__slider-right {
-        max-height: rem(750px);
+        height: rem(750px);
         width: 50%;
-        height: 100vh;
+        height: 100%;
         background-color: #e1e4d7;
+        
     }
     &__slider-right-prev {
-        max-height: rem(525px);
-        height: 100vh;
+        min-height: rem(525px);
         display: flex;
         justify-content: center;
         align-items: center;
     }
     &__slider-right-buttom {
-        max-height: rem(225px);
-        height: 100vh;
+        min-height: rem(225px);
         background-color: #4e8839;
         display: flex;
         width: 100%;
@@ -182,7 +226,14 @@ svg {
     &__slider-right-buttom-right {
         background-color: rgba(147, 153, 141, 0.7);
     }
-    
+    &__slider-right-prev-logo  {
+        width: rem(643px);
+        height: rem(416px);
+        overflow: hidden;
+    }
+    &__slider-right-prev-img {
+        width: 100%;
+    }
 }
 
 // about me
@@ -324,8 +375,7 @@ svg {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    max-height: rem(190px);
-    margin-top: rem(-210px);
+    margin-top: rem(-160px);
     &__row-up {
         background-color: #373e42;
         opacity: .85;
@@ -336,14 +386,47 @@ svg {
         width: 100%;
     }
     &__row-up-item {
-        width: 33.33%;
+        width: 33%;
         list-style-type: none;
         color: #fff;
+        display: flex; 
+        justify-content: flex-start;
+        &::after {
+            content: '';
+            display: flex;
+            width: rem(1px);
+            height: rem(87px);
+            background-color: #fff;
+            opacity: .2;
+            margin-left: rem(50px);
+            
+            
+        }
+        &:last-child:after {
+            display: none;
+        }
+        &--last {
+            flex-direction: column;
+        }
     }
     &__row-down {
         width: 100%;
         background-color: #6c9c5a;
         opacity: 0.85;
         text-align: center;
+    }
+    &__row-up-desc {
+        font-family: 'Roboto';
+        font-size: rem(16px);
+        font-weight: 300;
+        color: #ffffff;
+        padding: rem(5px);
+        &--last {
+            color: rgba(255, 255, 255, 0.5);
+            font-style: italic;
+        }
+        &--author {
+            font-weight: bold;
+        }
     }
 }
